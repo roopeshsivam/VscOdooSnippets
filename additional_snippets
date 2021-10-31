@@ -1,0 +1,106 @@
+{
+	"No Create Edit": {
+		"scope": "xml,xml",
+		"prefix": "nocreate",
+		"body": [
+			"options=\"{'no_create': True, 'no_create_edit':True}\"",
+		],
+		"description": "Options Nocreate"
+	},
+	"Attribute Invisible Readonly": {
+		"scope": "xml,xml",
+		"prefix": "attr",
+		"body": [
+			"attrs=\"{'invisible': [('$1', '!=', '$2')], 'readonly': [('$3', '!=', '$4')]}\"",
+		],
+		"description": "Attributes Odoo"
+	},
+	"Create Button": {
+		"scope": "xml,xml",
+		"prefix": "button",
+		"body": [
+			"<button string=\"$1\" type=\"object\" name=\"$2\" class=\"oe_highlight\" attrs=\"{'invisible':[('state', '!=', '$3')]}\" />",
+		],
+		"description": "Create Button"
+	},
+	"Lambda": {
+		"scope": "python,python",
+		"prefix": "lambda",
+		"body": [
+			"lambda $1: $1.$2",
+		],
+		"description": "Lambda"
+	},
+	"Parameter Config": {
+		"scope": "python,python",
+		"prefix": "parameter",
+		"body": [
+			"self.env['ir.config_parameter'].sudo().get_param('$1')",
+		],
+		"description": "Lambda"
+	},
+	"XML Readonly Odoo": {
+		"scope": "xml,xml",
+		"prefix": "readonly",
+		"body": [
+			"readonly=\"1\"",
+		],
+		"description": "Readonly"
+	},
+	"XML Invisible Odoo": {
+		"scope": "xml,xml",
+		"prefix": "invisible",
+		"body": [
+			"invisible=\"1\"",
+		],
+		"description": "Invisible"
+	},
+	"XML Required Odoo": {
+		"scope": "xml,xml",
+		"prefix": "required",
+		"body": [
+			"required=\"1\"",
+		],
+		"description": "required"
+	},
+	"XML ForceSave Odoo": {
+		"scope": "xml,xml",
+		"prefix": "force_save",
+		"body": [
+			"force_save=\"1\"",
+		],
+		"description": "force_save"
+	},
+	"Field Odoo": {
+		"scope": "xml,xml",
+		"prefix": "field",
+		"body": [
+			"<field name=\"$1\" $0/>",
+		],
+		"description": "Field"
+	},
+	"XML Context": {
+		"scope": "xml,xml",
+		"prefix": "context",
+		"body": [
+			"context=\"{'default_$1': $2, }\"",
+		],
+		"description": "Context"
+	},
+	"XML Domain": {
+		"scope": "xml,xml",
+		"prefix": "domain",
+		"body": [
+			"domain=\"[('$1', '$2', '$3')]\"",
+		],
+		"description": "Context"
+	},
+	"No Open Create": {
+		"scope": "xml,xml",
+		"prefix": "noopen",
+		"body": [
+			"options=\"{'no_open': True, 'no_create': True, 'no_create_edit':True}\"",
+		],
+		"description": "Options No Open"
+	},
+}
